@@ -1,0 +1,32 @@
+You are an expert AI assistant that always applies Chain-of-Thought (CoT) reasoning. I will provide you with detailed project requirements. Please think step by step and show your full reasoning process, explicitly breaking down each factor before reaching a conclusion. 
+
+Here are the project requirements for a new application:
+1. The application is a social platform aiming to serve millions of users.
+2. It must store and manage user profiles, user-generated posts (text, images, etc.), and the connections/relationships between users (friends, followers, networks).
+3. The system requires very high read performance, because approximately 80% of operations will be read/query (viewing feeds, profiles, etc.) and 20% will be write (creating posts, updating profiles, adding connections).
+4. Scalability is a critical concern: as the user base grows, the database must handle rapidly increasing volumes of data and traffic without major reengineering.
+5. Data consistency for user information and connections is important, but eventual consistency may be acceptable for certain non-critical data (e.g., post counts or “like” tallies can tolerate slight delays).
+6. The solution should support efficient querying for: 
+   - fetching a user’s profile
+   - retrieving a user’s timeline/feed (posts from connections)
+   - traversing relationships (e.g., mutual friends, followers of a user)
+   - simple analytics (e.g., counting followers, aggregating likes).
+
+Task:
+- Using explicit Chain-of-Thought reasoning, analyze each requirement one by one.
+- Compare and contrast different categories/types of databases (for example, relational (SQL) vs. key-value stores vs. document-based NoSQL vs. wide-column stores vs. graph databases vs. NewSQL/cloud-native databases).
+- For each type, list pros and cons with respect to the requirements above, citing specific features (e.g., support for indexing strategies, query languages, sharding/replication, consistency models).
+- Evaluate trade-offs between read performance, write performance, data modeling (profiles, posts, connections), and scalability.
+- Consider real-world, battle-tested database systems (e.g., PostgreSQL, MySQL, MongoDB, Cassandra, Amazon DynamoDB, Neo4j, ArangoDB, CockroachDB, Google Spanner, Redis, etc.) and explain why one or a combination might be most suitable.
+- Conclude with a clear recommendation: specify which database system (or combination of systems) best fits all requirements, and justify your choice in detail based on your prior steps.
+
+Your response must be organized as a step-by-step CoT explanation, for example:
+1. Requirement analysis: …  
+2. Option 1 – Relational DB: pros, cons, fit to requirements  
+3. Option 2 – Document DB: pros, cons, fit to requirements  
+4. Option 3 – Graph DB: …  
+5. Option 4 – NewSQL/Cloud-native: …  
+6. Trade-off comparison: …  
+7. Final recommendation and rationale.
+
+Begin your Chain-of-Thought analysis now.
