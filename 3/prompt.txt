@@ -1,0 +1,20 @@
+You will be provided with a piece of raw text. Your task is to:
+
+1. Generate a **concise summary** of the content while preserving the key ideas and meaning.
+2. Perform **sentiment analysis**, categorizing the sentiment as "positive", "neutral", or "negative".
+3. Provide a **sentiment score**:
+   - +1 for positive
+   - 0 for neutral
+   - -1 for negative
+
+Return your results in the following JSON format:
+
+{
+  "summary": "<Concise summary of the text>",
+  "sentiment": "<positive | neutral | negative>",
+  "sentiment_score": <+1 | 0 | -1>,
+  "metadata": {
+    "character_count": <number>,
+    "word_count": <number>
+  }
+}
