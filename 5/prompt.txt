@@ -1,0 +1,68 @@
+Analyze user feedback and extract structured insights about the product. Follow these steps:
+
+1. Determine if the feedback is relevant to the product. If not, set isRelevant to false and skip other fields.
+2. If relevant, analyze the sentiment: Positive, Neutral, Negative, or Mixed.
+3. Identify the main subject (e.g., "mouse", "app", "service", or null if unclear).
+4. Extract positive comments, pain points, and any suggestions for improvement.
+5. List specific features mentioned (e.g., "dongle", "tracking", "price").
+6. Guess the user's expertise level: Experienced, Novice, or Unknown.
+
+Output everything in this JSON format:
+
+{
+  "sentiment": "string (Positive|Negative|Neutral|Mixed)",
+  "isRelevant": boolean,
+  "mainSubject": "string or null",
+  "positives": ["array of strings"],
+  "painPoints": ["array of strings"],
+  "improvementSuggestions": ["array of strings"],
+  "featuresMentioned": ["array of strings"],
+  "userExpertise": "string (Experienced|Novice|Unknown)"
+}
+
+Examples:
+
+Feedback: "This app has completely changed how I manage my time. I love the new focus mode and the weekly reports are so helpful. However, syncing with my calendar sometimes fails."
+
+{
+  "sentiment": "Mixed",
+  "isRelevant": true,
+  "mainSubject": "app",
+  "positives": ["focus mode is helpful", "weekly reports are helpful"],
+  "painPoints": ["calendar syncing fails sometimes"],
+  "improvementSuggestions": ["fix calendar syncing issues"],
+  "featuresMentioned": ["focus mode", "weekly reports", "calendar sync"],
+  "userExpertise": "Unknown"
+}
+
+Feedback: "It's not bad. I like the battery life but the UI is clunky and sometimes the app crashes. I'm not a tech person though."
+
+{
+  "sentiment": "Mixed",
+  "isRelevant": true,
+  "mainSubject": "app",
+  "positives": ["good battery life"],
+  "painPoints": ["clunky UI", "app crashes"],
+  "improvementSuggestions": ["improve UI", "fix crashing issues"],
+  "featuresMentioned": ["battery life", "UI", "crashes"],
+  "userExpertise": "Novice"
+}
+
+Feedback: "I returned it after two days. The connection kept dropping and the battery died too fast. Also overpriced for what it offers."
+
+{
+  "sentiment": "Negative",
+  "isRelevant": true,
+  "mainSubject": "device",
+  "positives": [],
+  "painPoints": ["connection drops", "short battery life", "overpriced"],
+  "improvementSuggestions": ["stabilize connection", "improve battery", "lower price"],
+  "featuresMentioned": ["connection", "battery", "price"],
+  "userExpertise": "Unknown"
+}
+
+Now analyze the following feedbacks:
+
+Feedback: "Sensor just stops tracking for like a half second kinda often even at 8000hz. I've also tried it plugged in and still the same problem. First one I got I had to return also because the dongle just didnt work, $150 mouse btw"
+
+Feedback: "Is it worth it? It is a product with no flaws in my opinion, if you love it go for it, but its not worth the price since you'll be able to perform the same with a cheaper product with half the specs."

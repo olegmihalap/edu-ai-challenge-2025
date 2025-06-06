@@ -1,0 +1,49 @@
+[
+    {
+      "sentiment": "Negative",
+      "isRelevant": true,
+      "mainSubject": "mouse",
+      "positives": [],
+      "painPoints": [
+        "sensor stops tracking intermittently",
+        "issue persists even when plugged in",
+        "initial dongle was faulty",
+        "product is expensive"
+      ],
+      "improvementSuggestions": [
+        "fix tracking reliability",
+        "improve dongle quality",
+        "justify price with better quality assurance"
+      ],
+      "featuresMentioned": [
+        "sensor",
+        "tracking",
+        "8000hz",
+        "dongle",
+        "price"
+      ],
+      "userExpertise": "Experienced"
+    },
+    {
+      "sentiment": "Mixed",
+      "isRelevant": true,
+      "mainSubject": "product",
+      "positives": [
+        "no flaws according to user"
+      ],
+      "painPoints": [
+        "not worth the price",
+        "similar performance available at lower specs"
+      ],
+      "improvementSuggestions": [
+        "lower the price",
+        "justify premium pricing with unique features"
+      ],
+      "featuresMentioned": [
+        "price",
+        "specs"
+      ],
+      "userExpertise": "Unknown"
+    }
+  ]
+  
