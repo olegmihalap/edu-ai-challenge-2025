@@ -1,0 +1,9 @@
+Running Enigma machine tests...
+All tests passed successfully!
+
+=============================== Coverage summary ===============================
+Statements   : 75.38% ( 49/65 )
+Branches     : 62.5% ( 10/16 )
+Functions    : 68.42% ( 13/19 )
+Lines        : 73.33% ( 44/60 )
+================================================================================
