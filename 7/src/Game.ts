@@ -41,7 +41,8 @@ export class Game {
     for (let i = 0; i < this.boardSize; i++) {
       let rowStr = i + ' ';
       for (let j = 0; j < this.boardSize; j++) {
-        rowStr += this.cpuBoard.board[i][j] + ' ';
+        const opponentCell = this.cpuBoard.board[i][j] === 'S' ? '~' : this.cpuBoard.board[i][j];
+        rowStr += opponentCell + ' ';
       }
       rowStr += '    ' + i + ' ';
       for (let j = 0; j < this.boardSize; j++) {
